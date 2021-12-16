@@ -8,11 +8,11 @@ import Vuex from '../views/vuex.vue'
 import Axios from "../views/axios.vue";
 
 const routes: Array<RouteRecordRaw> = [
-    // {
-    //     path: '/',
-    //     name: 'Home',
-    //     component: Home
-    // },
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
     // {
     //     path: '/vuex',
     //     name: 'Vuex',
