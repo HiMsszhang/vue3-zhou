@@ -30,7 +30,7 @@ export default defineComponent({
         ]),
         todoName: string = ref(''),
         titleInfo: TitleInfo = ref({
-          value: '待办事项',
+          value: '整理',
           color: 'green',
         }),
         onTap = (id: number): void => {},
