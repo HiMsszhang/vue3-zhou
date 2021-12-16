@@ -10,7 +10,8 @@ import  Axios from './views/axios.vue'
 <template>
 <!--  <img alt="Vue logo" src="./assets/logo.png" />-->
 <!--  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />-->
-  <Home :title-info="{value:'待办事项',color:'green'}"></Home>
+  <router-view></router-view>
+  <!-- <Home :title-info="{value:'待办事项',color:'green'}"></Home> -->
 <!--  <Axios></Axios>-->
 </template>
 
