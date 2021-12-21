@@ -1,22 +1,24 @@
 <template>
   <div class="common-layout">
-<!--    <el-container>-->
-<!--      <el-header>Header</el-header>-->
-<!--      <div class="content">-->
-<!--        <el-aside>-->
-<!--          <div>dada</div>-->
-<!--        </el-aside>-->
-<!--        <el-main>good</el-main>-->
-<!--      </div>-->
-<!--      <el-container>-->
-<!--        <el-footer>Footer</el-footer>-->
-<!--      </el-container>-->
+    <el-container>
+      <el-header>Header</el-header>
+      <div class="content">
+        <el-aside>
+          <div>dada</div>
+        </el-aside>
+        <el-main>good</el-main>
+      </div>
+      <el-container>
+        <el-footer>Footer</el-footer>
+      </el-container>
 
-<!--    </el-container>-->
-    <div class="el-header"></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    </el-container>
+
+
+<!--    <div class="el-header"></div>-->
+<!--    <div></div>-->
+<!--    <div></div>-->
+<!--    <div></div>-->
   </div>
 </template>
 <script lang="ts" setup>

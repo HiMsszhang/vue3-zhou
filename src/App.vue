@@ -1,27 +1,42 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import  Home from './views/home.vue'
-import  Axios from './views/axios.vue'
+import Header from "./views/home/components/header/index.vue";
 
 </script>
 
 <template>
-<!--  <img alt="Vue logo" src="./assets/logo.png" />-->
-<!--  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />-->
-  <router-view></router-view>
-  <!-- <Home :title-info="{value:'待办事项',color:'green'}"></Home> -->
-<!--  <Axios></Axios>-->
+  <div id="app-content">
+    <!-- 壁纸切换组件 -->
+    <div id="home">
+      <!-- Header -->
+      <Header />
+      <!-- 路由 -->
+      <router-view />
+    </div>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+<style lang="scss">
+#app-content {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+  "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#home {
+  position: relative;
+  overflow: hidden;
+  min-width: 1200px;
+  width: calc(100vw - 120px);
+  min-height: 600px;
+  height: calc(100vh - 60px);
+  margin: 30px;
+  box-sizing: border-box;
+  border: 1px solid rgba($color: #c9c9c9, $alpha: 0.6);
+  border-radius: 8px;
+  box-shadow: 20px 0 20px 2px #e6e6e6, -20px 0 20px 2px #e6e6e6, 0 20px 20px 2px #e6e6e6;
 }
 </style>
