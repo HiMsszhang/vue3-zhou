@@ -5,7 +5,9 @@
         <div>good</div>
       </el-col>
       <el-col :span="16">
-        <header-navs v-show='showNavs'/>
+        <div>
+        <header-navs v-if='showNavs'/>
+        </div>
         <!--        <div class="tab-nav">-->
         <!--          -->
         <!--        </div>-->
@@ -42,7 +44,8 @@ export default defineComponent({
     // });
 
     const showNavs = computed(() => {
-          console.log(route.name)
+          debugger
+          console.log(route.name, showNavRouteNames.includes(route.name))
           return showNavRouteNames.includes(route.name)
         }
     );

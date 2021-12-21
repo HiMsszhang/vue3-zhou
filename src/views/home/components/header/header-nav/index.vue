@@ -39,13 +39,18 @@ export default defineComponent({
         { text: "系统通知", url: "/systemNotification", active: false },
       ] as Array<Nav>,
     });
-    watch(
-        () => route.path,
+    watch(route,
         (path) => {
+          debugger
           state.navs = state.navs.map((item) => ({
             ...item,
             active: item.url === path,
           }));
+          console.log(state,111)
+        },
+        {
+          immediate: true,
+          deep: true
         }
     );
     /**
