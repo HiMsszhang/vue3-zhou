@@ -40,7 +40,7 @@ export default defineComponent({
       ] as Array<Nav>,
     });
     watch(route,
-        (path) => {
+        ({path}) => {
           debugger
           state.navs = state.navs.map((item) => ({
             ...item,
