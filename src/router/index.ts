@@ -3,7 +3,6 @@ import {
     createWebHashHistory,
     RouteRecordRaw
 } from 'vue-router'
-import Home from '../views/home/home.vue'
 import Vuex from '../views/vuex.vue'
 import Axios from "../views/axios.vue";
 
@@ -19,7 +18,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'Home',
-        component: Home,
+        component: import('@views/home/home.vue'),
         children: [
             {
                 path:'/',
@@ -29,15 +28,15 @@ const routes: Array<RouteRecordRaw> = [
             {
                 path:'/videoList',
                 name:'VideoList',
-                component:()=>import('../views/home/components/main-content/components/views/video-list/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/video-list/index.vue'),
             },{
                 path:'/songList',
                 name:'SongList',
-                component:()=>import('../views/home/components/main-content/components/views/song-list/index.vue'),
+                component:()=>import('@views/home/components/main-content/components/views/song-list/index.vue'),
             },{
                 path:'/anchorStation',
                 name:'AnchorStation',
-                component:()=>import('../views/home/components/main-content/components/views/anchor-station/index.vue'),
+                component:()=>import('@views/home/components/main-content/components/views/anchor-station/index.vue'),
             },{
                 path:'/leaderboard',
                 name:'Leaderboard',
