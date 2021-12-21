@@ -5,8 +5,8 @@
         <div>good</div>
       </el-col>
       <el-col :span="16">
-        <div>
-        <header-navs v-if='showNavs'/>
+        <div v-show='showNavs'>
+        <header-navs />
         </div>
         <!--        <div class="tab-nav">-->
         <!--          -->
