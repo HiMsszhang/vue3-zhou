@@ -1,5 +1,8 @@
 <template>
   <div class="left-content">
+    <div>
+      <Userinfo/>
+    </div>
     <el-scrollbar class="scrollbar-reset">
       <NavList/>
     </el-scrollbar>
@@ -8,6 +11,7 @@
 
 <script lang="ts" setup>
 import NavList from './components/nav-list/index.vue'
+import Userinfo from './components/userinfo/index.vue'
 </script>
 
 <style lang="scss" scoped>

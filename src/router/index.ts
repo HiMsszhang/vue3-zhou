@@ -3,7 +3,7 @@ import {
     createWebHashHistory,
     RouteRecordRaw
 } from 'vue-router'
-import Home from '../views/home/home.vue'
+import Home from '@/views/home/home.vue'
 import Vuex from '../views/vuex.vue'
 import Axios from "../views/axios.vue";
 
@@ -24,36 +24,36 @@ const routes: Array<RouteRecordRaw> = [
             {
                 path:'/',
                 name:'PersonalRecommendation',
-                component:()=>import('../views/home/components/main-content/components/views/personal_recommendation/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/personal_recommendation/index.vue'),
             },
             {
                 path:'/videoList',
                 name:'VideoList',
-                component:()=>import('../views/home/components/main-content/components/views/video-list/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/video-list/index.vue'),
             },{
                 path:'/songList',
                 name:'SongList',
-                component:()=>import('../views/home/components/main-content/components/views/song-list/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/song-list/index.vue'),
             },{
                 path:'/anchorStation',
                 name:'AnchorStation',
-                component:()=>import('../views/home/components/main-content/components/views/anchor-station/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/anchor-station/index.vue'),
             },{
                 path:'/leaderboard',
                 name:'Leaderboard',
-                component:()=>import('../views/home/components/main-content/components/views/leader-board/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/leader-board/index.vue'),
             },{
                 path:'/singer',
                 name:'Singer',
-                component:()=>import('../views/home/components/main-content/components/views/singer/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/singer/index.vue'),
             },{
                 path:'/latestMusic',
                 name:'LatestMusic',
-                component:()=>import('../views/home/components/main-content/components/views/later-music/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/later-music/index.vue'),
             },{
                 path:'/systemNotification',
                 name:'SystemNotification',
-                component:()=>import('../views/home/components/main-content/components/views/system-notification/index.vue'),
+                component:()=>import('@/views/home/components/main-content/components/views/system-notification/index.vue'),
             },
         ] as Array<RouteRecordRaw>
     },

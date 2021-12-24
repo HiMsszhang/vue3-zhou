@@ -32,7 +32,7 @@ import Header from "./views/home/components/header/index.vue";
   min-width: 1200px;
   width: calc(100vw - 120px);
   min-height: 600px;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   margin: 30px;
   box-sizing: border-box;
   border: 1px solid rgba($color: #c9c9c9, $alpha: 0.6);

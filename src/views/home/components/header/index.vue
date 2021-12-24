@@ -1,29 +1,28 @@
 <template>
-  <div class="el-header">
+  <div class="header">
     <el-row>
       <el-col :span="4">
-        <div>good</div>
+        <opt></opt>
       </el-col>
-      <el-col :span="16">
-        <div v-show='showNavs'>
-        <header-navs />
-        </div>
-        <!--        <div class="tab-nav">-->
-        <!--          -->
-        <!--        </div>-->
+      <el-col v-show='showNavs' :span="16">
+        <header-navs/>
       </el-col>
-
     </el-row>
+    <Search/>
   </div>
 </template>
 <script lang="ts">
-import {computed, defineComponent, reactive, watch, ref,ComputedRef} from "vue"
+import {computed, defineComponent, reactive, watch, ref, ComputedRef} from "vue"
 import headerNavs from './header-nav/index.vue'
+import Opt from './opt/index.vue'
+import Search from './search/index.vue'
 import {useRoute} from "vue-router";
 
 export default defineComponent({
   components: {
-    headerNavs
+    headerNavs,
+    Opt,
+    Search
   },
   setup() {
     const route = useRoute()
@@ -44,7 +43,6 @@ export default defineComponent({
     // });
 
     const showNavs = computed(() => {
-          debugger
           console.log(route.name, showNavRouteNames.includes(route.name))
           return showNavRouteNames.includes(route.name)
         }
@@ -57,10 +55,12 @@ export default defineComponent({
 })
 </script>
 <style lang="scss">
-.el-header {
+.header {
   background-color: indianred;
-  /*color: var(--el-text-color-primary);*/
-  text-align: center;
-  line-height: 60px;
+  //text-align: center;
+  //align-items: center;
+  //vertical-align:middle;
+  height: 50px;
+  position: relative;
 }
 </style>
