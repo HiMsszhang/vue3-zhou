@@ -5,7 +5,7 @@
         <!-- left-content -->
         <left-content></left-content>
       </el-col>
-      <el-col class="right-content-wrapper" :span="16">
+      <el-col class="right-content-wrapper" :span="20">
         <!-- main-content -->
         <main-content></main-content>
       </el-col>

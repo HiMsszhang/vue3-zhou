@@ -5,16 +5,15 @@ import {
 } from 'vue-router'
 import Home from '@/views/home/home.vue'
 import Vuex from '../views/vuex.vue'
-import Axios from "../views/axios.vue";
 
 /**
  * 实现路由懒加载的工具函数
  * @param {string} viewPath  view的相对路径，相对于src目录
  */
-// export function lazyLoad(viewPath: string) {
-//     const modules = import.meta.glob("../views/**/*.vue");
-//     return modules[`../views/${viewPath}.vue`];
-// }
+export function lazyLoad(viewPath: string) {
+    const modules = import.meta.glob("../views/**/*.vue");
+    return modules[`../views/${viewPath}.vue`];
+}
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
@@ -57,11 +56,6 @@ const routes: Array<RouteRecordRaw> = [
             },
         ] as Array<RouteRecordRaw>
     },
-    {
-        path: '/axios',
-        name: 'axios',
-        component: Axios/*import('../views/axios.vue')*/ // 懒加载组件
-    }
 ]
 
 const router = createRouter({
